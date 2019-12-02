@@ -43,8 +43,7 @@
                     <b>{{product.name}}</b><br>  
                     <b>{{product.latestReviewDate}}</b><br>  
                     <b>{{product.productId}}</b><br>
-                    <b>{{product.createdAt}}</b><br> 
-                    <b>{{product.topScores}}</b><br> 
+                    <b>{{product.createdAt}}</b><br>  
 				</p>
 			</div>
 
@@ -57,12 +56,10 @@
 	</div>
     <div class="container">
 		<div class="row">
-			<div class="col-md-3 col-sm-6 col-xs-6" *ngFor="let topscore of product.topScores">
-				<h2>{{topscore.topic}}</h2>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. 
+			<div class="col-md-3 col-sm-6 col-xs-6 star" *ngFor="let topscore of product.topScores">
+				<h3>{{topscore.topic}}</h3>
+                <hr style="border:1.5px solid #4CAF50">
+                {{topscore.score}}<span class="fa fa-star checked"></span>
 			</div>
 		</div>
 	</div>
