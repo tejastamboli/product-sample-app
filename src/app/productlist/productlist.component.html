@@ -1,0 +1,72 @@
+<div>
+    <!--<div *ngFor="let product of productList">
+        <b>{{product.price}}</b><br>
+        <b>{{product.latestReviewDate}}</b><br>  
+        <b>{{product.domain}}</b><br>
+        <b>{{product.imageUrl}}</b><br>  
+        <b>{{product.name}}</b><br>  
+        <b>{{product.title}}</b><br>
+        <b>{{product.category}}</b><br>
+        <b>{{product.productId}}</b><br>
+        <b>{{product.createdAt}}</b><br> 
+         <b>{{product.topScores}}</b><br> 
+    
+    <div id="image"class="image" style="width:200px;height:200px;">
+         
+         <img [src]="product.imageUrl" alt="{{product.name}}" />
+    </div>     
+    </div>
+    <mat-card>Simple card</mat-card>-->
+
+<mat-card class="example-card" *ngFor="let product of productList">
+    
+
+  <mat-card-header>
+      
+  </mat-card-header>
+  <mat-card-content>
+      <div mat-card-avatar class="example-header-image"></div>
+      <img [src]="product.amazonUrl"><h1>{{product.domain}}</h1>
+      <div class="container">
+		<div class="row">
+			<div class="col-md-2 col-sm-3">
+				<h3>{{product.category}}</h3>
+                <p>
+				    <img [src]="product.imageUrl">
+                </p>
+			</div>	
+
+			<div class="col-md-8 col-sm-6">
+				<h3>{{product.title}}</h3>
+                4.3<span class="fa fa-star checked"></span> &nbsp; 3,49,287 Ratings & {{product.reviewCount}} Reviews<br><br>
+				<p>
+                    <b>{{product.name}}</b><br>  
+                    <b>{{product.latestReviewDate}}</b><br>  
+                    <b>{{product.productId}}</b><br>
+                    <b>{{product.createdAt}}</b><br> 
+                    <b>{{product.topScores}}</b><br> 
+				</p>
+			</div>
+
+            <div class="col-md-2 col-sm-3">
+				<h3>{{product.price}}</h3>
+                Upto <span class="text1">18% Off</span>
+			</div>	
+		
+		</div>
+	</div>
+    <div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-6 col-xs-6" *ngFor="let topscore of product.topScores">
+				<h2>{{topscore.topic}}</h2>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. 
+			</div>
+		</div>
+	</div>
+  </mat-card-content>
+</mat-card>
+</div>
+
